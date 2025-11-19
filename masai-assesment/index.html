@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-Box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .product-box {
+        width: 500px;
+        height: 600px;
+        margin: 8px;
+        padding: 30px;
+        border: 3px solid grey;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;     
+    }
+
+    .product-box img {
+        width: 60%;
+        border-radius: 10px;
+    }
+
+    .product-name {
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .product-description {
+        color: #6b6969;
+        margin: 5px 0;
+    }
+
+    .reviews{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    .reviews button{
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 7px;
+        border-radius: 2px;
+        margin-right: 8px;
+    }
+
+    .reviews p{
+        color: #6b6969;
+        font-size: 1.5rem;
+        margin-right: 8px;
+    }
+    .reviews img{
+        width: 100px;
+        height: 30px;
+    }
+
+    .price{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .price h2{
+        margin-right: 8px;
+    }
+
+    .price p{
+        color: #6b6969;
+        text-decoration: line-through;
+        margin-right: 8px;
+    }
+
+    .price h3{
+        color: green;
+    }
+    .buy-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        border: none;
+        background-color: black;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .buy-btn:hover {
+        background-color: #444;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="product-box">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/w/x/h/-original-imahfa7xspmxemvj.jpeg" alt="Product Image">
+        <h3 class="product-name">SAMSUNG Galaxy Watch6 LTE</h3>
+        <p class="product-description">Graphite Strap, 44mm</p>
+        <div class="reviews">
+            <button>4.3<i class="fa-solid fa-star"></i></button>
+            <p>(973)</p>
+            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="flipkart-img" class="flipkart-img">
+        </div>
+        <div class="price">
+            <h2>₹18,999</h2>
+            <p>₹41,999</p>
+            <h3>54% off</h3>
+        </div>
+        <button class="buy-btn">Buy Now</button>
+</div>
+</body>
+</html>

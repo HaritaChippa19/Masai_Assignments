@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{
+            font-family: 'Times New Roman', Times, serif;
+            background: linear-gradient(to bottom, #e0e0e0, #f8f8f8);
+        } */
+        h1, h2{
+            border: 3px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+        img{
+            width: 400px;
+            border-radius: 50%;
+            box-shadow: 10px 10px black;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        thead th{
+            background:#0ea5a4;color:white;
+        }
+        tbody tr:nth-child(1) td:nth-child(1){
+            border-color:#ef4444
+        }
+        tbody tr:nth-child(1) td:nth-child(2){
+            border-color:#f59e0b
+        }
+        tbody tr:nth-child(2) td:nth-child(1){
+            border-color:#10b981
+        } 
+        tbody tr:nth-child(2) td:nth-child(2){
+            border-color:#3b82f6
+        }
+        tbody tr:nth-child(3) td:nth-child(1){
+            border-color:#8b5cf6
+        }
+        tbody tr:nth-child(3) td:nth-child(2){
+            border-color:#ec4899
+        }
+        tbody td:nth-child(1){
+            border-left-style:solid
+        }
+        tbody td:nth-child(2){
+            border-right-style:solid
+        }
+        .btn{
+            background-color: #8b5cf6;
+            color: black;
+            padding: 5px;
+        }
+        .btn:hover{
+            background-color: #ec4899;
+        }
+        p{
+            text-align: center;
+            color: darkgray;
+            border: 2px solid black;
+        }
+        footer{
+            background-color: darkgrey;
+            color: black;
+            font-size: 12px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="background-color: light grey; color: darkblue; font-size: 40px;">Welcome to My Webpage!</h1>
+    <h2 style="font-weight: bold; color: green; font-size: 28px;">Learning Web Development</h2>
+    <nav>
+        <a href="#" style="text-decoration:none;" onmouseover="this.style.textDecoration='underline'"onmouseout="this.style.textDecoration='none'">Home</a>
+        <a href="#" style="text-decoration:none;" onmouseover="this.style.textDecoration='underline'"onmouseout="this.style.textDecoration='none'">About</a>
+        <a href="#" style="text-decoration:none;" onmouseover="this.style.textDecoration='underline'"onmouseout="this.style.textDecoration='none'">Contact</a>
+    </nav>
+
+    <img src="https://images.unsplash.com/photo-1510673398445-94f476ef2cbc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFudGVybnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" alt="lantern">
+    <table>
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Web Design</td>
+                <td>$300</td>
+            </tr>
+            <tr>
+                <td>Hosting (1 year)</td>
+                <td>$120</td>
+            </tr>
+            <tr>
+                <td>Maintenance</td>
+                <td>$50 / month</td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn">Learn More</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quidem totam obcaecati magnam tenetur quam. Possimus quam quae similique tempora sapiente corporis. Repellendus possimus eveniet quidem veniam et ea expedita.</p>
+
+    <form>
+        <h4>Enter Your Name</h2>
+        <input type="text">
+        <h4>Enter Your Email</h2>
+        <input type="email">
+        <button>Submit</button>
+    </form>
+
+    <footer>
+        <label>© 2025 Signup.</label>
+    </footer>
+</body>
+</html>
