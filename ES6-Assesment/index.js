@@ -33,3 +33,29 @@ for (const { name, address: { city, street: { name: streetName } } } of people) 
 console.log(result);
 
 //Question 14
+const profile = {
+  name: "Charlie",
+  age: 29,
+  address: {
+    city: "San Francisco",
+    zipcode: "94101"
+  }
+};
+
+const updates = {
+  age: 30,
+  address: {
+    zipcode: "94109",
+    country: "USA"
+  }
+};
+
+const merged = {
+  ...profile,
+  ...updates,
+  address: {
+    ...profile.address,
+    ...updates.address
+  }
+};
+console.log(merged);
