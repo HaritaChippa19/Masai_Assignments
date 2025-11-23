@@ -80,4 +80,12 @@ const student = {
 //c
 const getFullName = (first, last) => `${first} ${last}`;
 
+//Question 16
+//a
+const isEven = n => n % 2 === 0;
+//b
+const result1 = marks >= 35 ? "Pass" : "Fail";
+//c
+const greet = name => `Hello, ${name ? name : "Guest"}`;
+
 
