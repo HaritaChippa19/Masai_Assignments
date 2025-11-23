@@ -59,3 +59,25 @@ const merged = {
   }
 };
 console.log(merged);
+
+//Question15
+//a
+const user = "Harita";
+const course = "JavaScript";
+
+console.log(`Hello ${user}, welcome to the ${course} course!`);
+//b
+const name = "Sam";
+const age = 21;
+
+const student = {
+  name,
+  age,
+  greet() {
+    console.log("Hello");
+  }
+};
+//c
+const getFullName = (first, last) => `${first} ${last}`;
+
+
