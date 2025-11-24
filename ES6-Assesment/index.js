@@ -88,4 +88,66 @@ const result1 = marks >= 35 ? "Pass" : "Fail";
 //c
 const greet = name => `Hello, ${name ? name : "Guest"}`;
 
+//Question 17
+//a
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5];
+const merge = [...arr1, ...arr2];
+console.log(merge); // [1, 2, 3, 4, 5]
+
+//b
+const sum = (...nums) => nums.reduce((acc, n) => acc + n, 0);
+
+//c
+const user1 = {
+  name1: "Alice",
+  age: 22,
+  address: {
+    city: "Bangalore",
+    pin: 560001
+  }
+};
+
+const {
+  name1,
+  address: { city, pin }
+} = user1;
+
+console.log(name1, city, pin);
+
+//Question 18
+//a
+if (true) {
+  let x = 10;
+  var y = 20;
+}
+console.log(y);
+console.log(x);
+
+//Output
+20
+//ReferenceError: x is not defined
+//b
+const profile1 = {
+  user: {
+    details: {
+      email: "test@mail.com"
+    }
+  }
+};
+console.log(profile1?.user?.details?.email);  
+console.log(profile1?.user?.details?.phone);  
+
+//c
+const data = {
+  user: {
+    name: "Alice"
+  }
+};
+
+console.log(data.user.address.city); 
+console.log(data.user.address?.city); 
+
+
+
 
