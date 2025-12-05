@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App with API + LocalStorage</title>
+</head>
+<body>
+
+    <h2>Todo List (API + LocalStorage)</h2>
+    <button id="loadTodosBtn">Load Todos from API</button>
+
+    <div id="todoContainer"></div>
+
+    <script>
+        const API_URL = "https://jsonplaceholder.typicode.com/todos";
+        const STORAGE_KEY = "apiTodos";
+        const todoContainer = document.getElementById("todoContainer");
+        const loadBtn = document.getElementById("loadTodosBtn");
+
+        async function fetchTodos() {
+            try {
+                const response = await fetch(API_URL);
+                const todos = await response.json();
+
+                const first20 = todos.slice(0, 20);
+                saveToLocalStorage(first20);
+                renderTodos(first20);
+
+            } catch (error) {
+                console.error("Error fetching todos:", error);
+            }
+        }
+
+        function saveToLocalStorage(todos) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+        }
+
+        function loadFromLocalStorage() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            return saved ? JSON.parse(saved) : [];
+        }
+
+        function deleteTodo(id) {
+            let todos = loadFromLocalStorage();
+            todos = todos.filter(todo => todo.id !== id);
+            saveToLocalStorage(todos);
+            renderTodos(todos);
+        }
+
+        function renderTodos(todos) {
+            todoContainer.innerHTML = "";
+            
+            todos.forEach(todo => {
+                const div = document.createElement("div");
+                div.className = "todo";
+
+                const title = document.createElement("span");
+                title.textContent = todo.title;
+
+                const status = document.createElement("span");
+                status.textContent = todo.completed ? "Completed" : "Pending";
+                status.className = todo.completed ? "completed" : "pending";
+
+                const delBtn = document.createElement("button");
+                delBtn.textContent = "Delete";
+                delBtn.addEventListener("click", () => deleteTodo(todo.id));
+
+                div.appendChild(title);
+                div.appendChild(status);
+                div.appendChild(delBtn);
+
+                todoContainer.appendChild(div);
+            });
+        }
+
+        loadBtn.addEventListener("click", fetchTodos);
+
+        window.addEventListener("load", () => {
+            const stored = loadFromLocalStorage();
+            if (stored.length > 0) {
+                renderTodos(stored);
+            }
+        });
+    </script>
+</body>
+</html>
