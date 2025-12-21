@@ -12,11 +12,11 @@ export default function VideoPlayer() {
   };
 
   const handleForward = () => {
-    videoRef.current.currentTime += 5; // skip forward 5 seconds
+    videoRef.current.currentTime += 5; 
   };
 
   const handleRewind = () => {
-    videoRef.current.currentTime -= 5; // rewind 5 seconds
+    videoRef.current.currentTime -= 5; 
   };
 
   return (
@@ -29,10 +29,10 @@ export default function VideoPlayer() {
       ></video>
 
       <div style={{ marginTop: "20px" }}>
-        <button onClick={handlePlay}>▶️ Play</button>
-        <button onClick={handlePause}>⏸ Pause</button>
-        <button onClick={handleForward}>⏩ Forward 5s</button>
-        <button onClick={handleRewind}>⏪ Rewind 5s</button>
+        <button onClick={handlePlay}> Play</button>
+        <button onClick={handlePause}> Pause</button>
+        <button onClick={handleForward}> Forward 5s</button>
+        <button onClick={handleRewind}>Rewind 5s</button>
       </div>
     </div>
   );
